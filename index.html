@@ -1,0 +1,43 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+
+            var employee = {
+                name : "Sedat",
+                surname :"Koc",
+                number : 12345678,
+                languages:["php", "java","Kotlin","c++"],
+                address : {
+                    street :"St. George washington",
+                    postCode:"2563"
+                },
+                employeeInfo : function(){
+                    return "name : "+this.name+", surname: "+this.surname;
+                }
+
+            };
+
+            console.log(employee.employeeInfo());
+            console.log(employee.number);
+            console.log(employee.languages);
+            console.log(employee.address);
+
+            //second method
+
+            var student = new Object();
+            student.name="Jane";
+            student.surname="Patrick";
+            student.grade=60;
+
+            student.Calc = function(totalMark){
+                  return (this.grade*100)/totalMark;
+            };
+            console.log(student.name+" "+student.surname);
+            console.log("Grade : "+student.Calc(80));
+
+        </script>
+    </body>
+</html>
