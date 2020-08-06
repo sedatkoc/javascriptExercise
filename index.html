@@ -37,7 +37,22 @@
             };
             console.log(student.name+" "+student.surname);
             console.log("Grade : "+student.Calc(80));
+            // better coding for the second method
 
+            function Students(name, surname, grade){
+                this.name=name;
+                this.surname=surname;
+                this.grade=grade;
+
+                this.displayInformation= function(){
+                    return "name: "+this.name+"\t surname: "+this.surname+"\nGrade: "+this.grade;
+                }
+            };
+
+            var student1 = new Students("Sedat", "Koc", 70);
+            var student1 = new Students("Tony", "Walker", 90);
+
+            console.log(student1.displayInformation());
         </script>
     </body>
 </html>
